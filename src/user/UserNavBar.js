@@ -9,8 +9,8 @@ export default function UserNavBar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // localStorage.removeItem('isJobSeekerLoggedIn');
-    // localStorage.removeItem('jobseeker');
+     localStorage.removeItem('isUserLoggedIn');
+     localStorage.removeItem('user');
 
     navigate('/userlogin');
     window.location.reload()
