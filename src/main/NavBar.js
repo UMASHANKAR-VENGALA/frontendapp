@@ -7,7 +7,7 @@ import AdminLogin from "../admin/AdminLogin";
 import PageNotFound from "./PageNotFound";
 import './style.css'
 
-export default function NavBar() {
+export default function NavBar({onAdminLogin,onUserLogin}) {
     return (
       <div>
         <nav>
@@ -27,8 +27,8 @@ export default function NavBar() {
         <Routes>
           <Route path="/" element={<Home/>} exact />
           <Route path="/userregistration" element={<UserRegistration/>} exact />
-          <Route path="/userlogin" element={<UserLogin/>} exact />
-          <Route path="/adminlogin" element={<AdminLogin/>} exact />
+          <Route path="/userlogin" element={<UserLogin onUserLogin={onUserLogin}/>} exact />
+          <Route path="/adminlogin" element={<AdminLogin onAdminLogin={onAdminLogin}/>} exact />
           <Route path="*" element={<PageNotFound/>} exact />
         </Routes>
       </div>
