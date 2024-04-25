@@ -5,6 +5,7 @@ import './admin.css';
 import AdminHome from './AdminHome';
 import ViewUsers from './ViewUsers';
 import ViewUserProfile from './ViewUserProfile';
+import AddSong from './AddSong';
 
 export default function AdminNavBar() {
   const navigate = useNavigate();
@@ -42,6 +43,7 @@ export default function AdminNavBar() {
         <Route path="/adminhome" element={<AdminHome />} exact />
         <Route path="/viewusers" element={<ViewUsers />} exact />
         <Route path="/viewuserprofile/:email" element={<ViewUserProfile/>} exact />
+        <Route path="/createsong" element={<AddSong/>} exact />
         
       </Routes>
     </div>
