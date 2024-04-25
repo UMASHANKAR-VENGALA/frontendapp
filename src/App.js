@@ -29,7 +29,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <h3 align="center">ZENE</h3>
+      
+      {/* <div><h3 align="center">ZENE</h3></div> */}
+
       <Router>
         {isAdminLoggedIn ? (
           <AdminNavBar />

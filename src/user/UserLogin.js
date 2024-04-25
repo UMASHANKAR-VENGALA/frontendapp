@@ -47,11 +47,14 @@ export default function UserLogin({onUserLogin})
 
   return (
     <div>
-      <h3 align="center"><u>User Login</u></h3>
+      
+      <form onSubmit={handleSubmit}>
+
+      <h3 align="center" style={{fontFamily:"",fontSize:"40px"}}>User Login</h3>
       {
         message ? <h4 align="center">{message}</h4> : <h4 align="center" style={{color:"red"}}>{error}</h4>
       }
-      <form onSubmit={handleSubmit}>
+
         <div>
           <label>Email</label>
           <input type="email" id="email" value={formData.email} onChange={handleChange} required />
@@ -60,6 +63,7 @@ export default function UserLogin({onUserLogin})
           <label>Password</label>
           <input type="password" id="password" value={formData.password} onChange={handleChange} required />
         </div>
+        <br />
         <button type="submit" className="button">Login</button>
       </form>
     </div>

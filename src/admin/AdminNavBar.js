@@ -35,7 +35,7 @@ export default function AdminNavBar() {
                  <Link to="/viewsongs">View Songs</Link>
             </div>
           </li>
-          <li><button className="logoutButton" onClick={handleLogout}>Logout</button></li>
+          <li style={{float:"right"}}><button className="logoutButton" onClick={handleLogout}>Logout</button></li>
         </ul>
       </nav>
 

@@ -6,21 +6,19 @@ import UserLogin from "../user/UserLogin";
 import AdminLogin from "../admin/AdminLogin";
 import PageNotFound from "./PageNotFound";
 import './style.css'
+import LOGO from './LOGO.png';
 
 export default function NavBar({onAdminLogin,onUserLogin}) {
     return (
       <div>
         <nav>
         <ul>
+
+            <li ><Link to="/">ZENE</Link></li>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/userregistration">User Registration</Link></li>
-            <li className="dropdown">
-              <Link>Login</Link>
-              <div className="dropdown-content">
-                <Link to="/userlogin">User Login</Link>
-                <Link to="/adminlogin">Admin Login</Link>
-              </div>
-            </li>
+            <li style={{float:"right",height:"100%"}} ><Link style={{color:"orange"}} to="/userlogin">User Login</Link>
+                <Link style={{color:"orange"}} to="/adminlogin">Admin Login</Link></li>
           </ul>
         </nav>
   

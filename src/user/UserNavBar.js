@@ -21,14 +21,9 @@ export default function UserNavBar() {
       <nav>
         <ul>
           <li><Link to="/userhome">Home</Link></li>
-          <li className="dropdown">
-            <Link>Profile</Link>
-            <div className="dropdown-content">
-            <Link to="/userprofile">View Profile</Link>
-            <Link to="/updateprofile">Update Profile</Link>
-            </div>
-          </li>
-          <li><button className="logoutButton" onClick={handleLogout}>Logout</button></li>
+          <li ><Link to="/userprofile">View Profile</Link></li>
+          <li><Link to="/updateprofile">Update Profile</Link></li>
+          <li style={{float:"right"}}><button className="logoutButton" onClick={handleLogout}>Logout</button></li>
         </ul>
       </nav>
 
