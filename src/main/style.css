@@ -140,12 +140,23 @@ ul, ol {
   max-width: 350px;
   margin: 100px auto;
   width: auto;
-  text-align: left;
+  text-align: center;
   font-size: larger;
   /* font-family: arial; */
   border: 3px solid white;
   box-shadow: 0 4px 8px 0 rgba(227, 227, 227, 0.619), 0 6px 20px 0 rgb(238, 238, 238);
   padding: 20px; 
+  }
+
+  .card {
+    border-radius: 10px;
+  }
+
+  .image{
+    width: 140px;
+    height: 140px;
+    object-fit:fill;
+    border-radius: 5px;
   }
   
   .logoutButton {
@@ -236,7 +247,7 @@ ul, ol {
     color: white;
     font-weight: 500;
     /* border-style: inset; */
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
   }
   
   /* tr:nth-child(odd){background-color: #a0a09d}
@@ -306,7 +317,6 @@ ul, ol {
 .homescreen {
   width: 100vw;
   height: 95vh;
-  border: 2px solid orange;
   box-sizing: border-box;
   padding: 35px;
 }
@@ -355,4 +365,29 @@ ul, ol {
 
 .albumbuttons {
   margin-top: 15px;
+}
+
+
+/* /////////////////////////////////////////////// */
+.homescreen {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+}
+
+.get-started-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-button:hover {
+  background-color: #45a049;
 }

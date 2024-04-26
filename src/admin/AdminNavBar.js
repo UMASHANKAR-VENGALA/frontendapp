@@ -10,6 +10,7 @@ import AddSongs from './AddSongs';
 import CreateAlbum from './CreateAlbum';
 import ViewAlbum from './ViewAlbum';
 import AdminAlbums from './AdminAlbums';
+import PlaySong from './PlaySong';
 
 export default function AdminNavBar() {
   const navigate = useNavigate();
@@ -30,9 +31,9 @@ export default function AdminNavBar() {
           <li >
               <Link to="/viewusers">View Users</Link>
           </li>
-          <li><Link to="/adminalbums">Albums</Link></li>
-          <li><Link to="/createsong">Add Song</Link>
-              <Link to="/viewsongs">View Songs</Link></li>
+          {/* <li><Link to="/adminalbums">Albums</Link></li> */}
+          <li><Link to="/createsong">Add Song</Link></li>
+              {/* <Link to="/viewsongs">View Songs</Link></li> */}
           <li style={{float:"right"}}><button className="logoutButton" onClick={handleLogout}>Logout</button></li>
         </ul>
       </nav>
@@ -47,6 +48,7 @@ export default function AdminNavBar() {
         <Route path="/viewalbum/:moviename" element={<ViewAlbum />} />
         <Route path="/createalbum" element={<CreateAlbum/>}/>
         <Route path="/adminalbums" Component={AdminAlbums}/>
+        <Route path="/playsong/:songname" element={<PlaySong/>}/>
         
       </Routes>
     </div>

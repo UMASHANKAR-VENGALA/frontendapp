@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-//import './viewuser.css'
+// import './admin.css'
 import CreateAlbum from './CreateAlbum'
 import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -50,7 +50,7 @@ export default function AdminAlbums() {
         <Route path="/createalbum" element={<CreateAlbum/>}/>
     </Routes>
     
-      <h1 align="left">Albums</h1><br/>
+      <h1 align="center">Albums</h1><br/>
       <table >
 
       <tbody>
@@ -61,12 +61,12 @@ export default function AdminAlbums() {
                {
 
         
-          <div className="profile-card">
-    <img src={`${config.url}/albumimage/${event.file}`} alt={event.name} width="50%" className='imgcd' />
+          <div className="card">
+    <img src={`${config.url}/albumimage/${event.file}`} alt={event.name} width="50%" className='image' />
  
-        <h4>{event.name}</h4>
+        <p style={{fontSize:"22px", fontWeight:"bold"}}>{event.name}</p>
         <div align="center">
-        <button onClick={() => handlesongs(event.name)} className='button'>View Album</button>&nbsp;&nbsp;&nbsp;
+        <button onClick={() => handlesongs(event.name)} style={{padding:"10px"}} className='button'>View Album</button>&nbsp;&nbsp;&nbsp;
 
     </div>
     
