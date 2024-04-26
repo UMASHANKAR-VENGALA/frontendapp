@@ -41,7 +41,7 @@ export default function AdminAlbums() {
   <div className="main_content">
   {/* <h2 class="header" > I am in View Users page</h2>   */}
   <div className="info">
-    <div align="right">
+    <div className="albumbuttons" align="right">
     <Link to="/createalbum" className='button'>Create Album</Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <Link to="/addsongs" className='button'>Add Songs</Link>
     </div>
@@ -50,7 +50,7 @@ export default function AdminAlbums() {
         <Route path="/createalbum" element={<CreateAlbum/>}/>
     </Routes>
     
-      <h2 align="left">Albums</h2><br/>
+      <h1 align="left">Albums</h1><br/>
       <table >
 
       <tbody>
@@ -61,7 +61,7 @@ export default function AdminAlbums() {
                {
 
         
-          <div className="card">
+          <div className="profile-card">
     <img src={`${config.url}/albumimage/${event.file}`} alt={event.name} width="50%" className='imgcd' />
  
         <h4>{event.name}</h4>

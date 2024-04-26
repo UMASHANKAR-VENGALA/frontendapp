@@ -35,6 +35,7 @@ export default function ViewAlbum() {
       <div className="info">
         {/* Use conditional rendering to avoid accessing albimg when it's null */}
         {albimg && <img className='play' src={`${config.url}/albumimage/${albimg.image}`} alt={albimg} />}
+        <h1 align="center">{moviename}</h1>
         <table id="playsong">
           <tr>
             <th>Sno</th>
