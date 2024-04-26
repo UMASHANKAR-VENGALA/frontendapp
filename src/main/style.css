@@ -137,13 +137,15 @@ ul, ol {
   
   .profile-card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: 10px auto;
+  max-width: 350px;
+  margin: 100px auto;
   width: auto;
-  text-align: center;
-  font-family: arial;
-  border: 3px solid black;
-  padding: 10px; 
+  text-align: left;
+  font-size: larger;
+  /* font-family: arial; */
+  border: 3px solid white;
+  box-shadow: 0 4px 8px 0 rgba(227, 227, 227, 0.619), 0 6px 20px 0 rgb(238, 238, 238);
+  padding: 20px; 
   }
   
   .logoutButton {
@@ -319,11 +321,11 @@ ul, ol {
 
 .play {
   /* Adjust width and height as needed */
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: auto;
   object-fit: cover; /* Maintain aspect ratio and resize image */
   float: left;
-  margin-right: 10px; /* Add space between image and table */
+  margin-right: 20px; /* Add space between image and table */
 }
 
 #playsong {

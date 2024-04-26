@@ -61,10 +61,13 @@ export default function UpdateUserProfile() {
   
   return (
     <div>
-      <h3 align="center"><u>Update Your Profile</u></h3>
-      {message ? <h4 align="center">{message}</h4> : <h4 align="center" color='red'>{error}</h4>}
+      
       <form onSubmit={handleSubmit}>
         <div>
+
+        <h3 align="center" style={{fontSize:"35px"}}>Update Your Profile</h3>
+      {message ? <h4 align="center">{message}</h4> : <h4 align="center" color='red'>{error}</h4>}
+
           <label>Full Name</label>
           <input type="text" id="fullname" value={userData.fullname} onChange={handleChange} required />
         </div>
