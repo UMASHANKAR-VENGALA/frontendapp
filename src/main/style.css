@@ -1,6 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 body {
   background-color: #555;
+  font-family: "Raleway", sans-serif;
 }
 
 ul, ol {
@@ -10,7 +11,7 @@ ul, ol {
   }
   
   nav {
-    background-color: #333;
+
     top: 0;
     width: 100%;
   }
@@ -19,12 +20,13 @@ ul, ol {
     display: inline-block;
     padding: 15px 20px;
     text-decoration: none;
-    color: rgb(174, 221, 160);
-    font-weight: 600;
+    color: rgb(91, 225, 255);
+    font-weight: 700;
+    font-size:22px;
   }
   
   nav a:hover {
-    background-color: #555;
+    color: #ffcb3b;
   }
   
   nav ul {
@@ -67,26 +69,20 @@ ul, ol {
   h2 {
     margin-bottom: 20px;
   }
-  
-  /* form {
-    margin: auto;
-    width: 300px;
-    text-align: center; 
-  } */
 
   form {
     margin: auto;
     width: 300px;
     text-align: center; 
     border: 2px solid white;
-    box-shadow: 5px 5px 5px rgb(174, 221, 160);
+    box-shadow: rgb(139, 201, 255);    ;
     padding: 28px;
     margin-top: 80px;
     margin: 50%vw;
     border-radius: 12px;
-    color: rgb(174, 221, 160);
+    color: rgb(204, 246, 255);
     overflow: hidden;
-    backdrop-filter: blur(10px);  /* background-image: linear-gradient(to right,rgb(105, 234, 251),rgb(223, 92, 252)); */
+    backdrop-filter: blur(5px);  /* background-image: linear-gradient(to right,rgb(105, 234, 251),rgb(223, 92, 252)); */
   }
   
   label {
