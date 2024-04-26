@@ -54,10 +54,9 @@ export default function Registration()
   return (
     <div>
       
-
       <form onSubmit={handleSubmit}>
 
-      <h3 align="center" style={{fontFamily:"cursive",fontSize:"40px"}}><u>User Registration</u></h3>
+      <h3 align="center" style={{fontSize:"40px"}}>Registration</h3>
       {
         message ? <h4 align="center">{message}</h4> : <h4 align="center">{error}</h4>
       }
@@ -87,6 +86,7 @@ export default function Registration()
           <label>Contact </label>
           <input type="text" id="contact" value={formData.contact}   pattern="[6789][0-9]{9}" onChange={handleChange} required />
         </div>
+        <br />
         <button type="submit">Register</button>
       </form>
     </div>

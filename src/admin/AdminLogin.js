@@ -59,6 +59,7 @@ export default function AdminLogin({ onAdminLogin }) {
           <label>Password</label>
           <input type="password" name="password" value={formData.password} onChange={handleChange} required />
         </div>
+        <br />
         <button type="submit" className="button">Login</button>
       </form>
     </div>
