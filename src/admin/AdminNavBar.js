@@ -21,20 +21,13 @@ export default function AdminNavBar() {
     <div>
       <nav>
         <ul>
+          <li ><Link to="/adminhome">ZENE</Link></li>
           <li><Link to="/adminhome">Home</Link></li>
-          <li className="dropdown">
-            <Link>Users</Link>
-            <div className="dropdown-content">
+          <li >
               <Link to="/viewusers">View Users</Link>
-            </div>
           </li>
-          <li className="dropdown">
-            <Link>Songs</Link>
-            <div className="dropdown-content">
-                 <Link to="/createsong">Add Song</Link>
-                 <Link to="/viewsongs">View Songs</Link>
-            </div>
-          </li>
+          <li><Link to="/createsong">Add Song</Link>
+              <Link to="/viewsongs">View Songs</Link></li>
           <li style={{float:"right"}}><button className="logoutButton" onClick={handleLogout}>Logout</button></li>
         </ul>
       </nav>

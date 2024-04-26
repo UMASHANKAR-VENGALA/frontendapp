@@ -46,7 +46,7 @@ export default function AdminLogin({ onAdminLogin }) {
       
       <form onSubmit={handleSubmit}>
 
-      <h3 align="center" style={{fontFamily:"cursive",fontSize:"40px"}}><u>Admin Login</u></h3>
+      <h3 align="center" style={{fontFamily:"",fontSize:"40px"}}>Admin Login</h3>
       {
         message ? <h4 align="center">{message}</h4> : <h4 align="center" style={{color:"red"}}>{error}</h4>
       }
