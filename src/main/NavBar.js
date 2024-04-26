@@ -14,8 +14,8 @@ export default function NavBar({onAdminLogin,onUserLogin}) {
         <nav>
         <ul>
 
-            <li ><Link to="/">ZENE</Link></li>
-            <li><Link to="/">Home</Link></li>
+            <li className="logo" style={{fontFamily:"serif"}}><Link to="/">ZENE</Link></li>
+            <li style={{color:"red"}}><Link to="/">Home</Link></li>
             <li><Link to="/userregistration">User Registration</Link></li>
             <li style={{float:"right",height:"100%"}} ><Link  to="/userlogin">User Login</Link>
                 <Link  to="/adminlogin">Admin Login</Link></li>

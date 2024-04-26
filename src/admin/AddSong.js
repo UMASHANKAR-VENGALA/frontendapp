@@ -61,10 +61,13 @@ export default function AddSong() {
 
   return (
     <div>
-      <h3 align="center"><u>Add Song</u></h3>
+      
+      <form onSubmit={handleSubmit} encType="multipart/form-data" method='post'>
+
+      <h3 align="center" style={{fontSize:"40px"}}>Add Song</h3>
       {message ? <h4 align="center">{message}</h4> : null}
       {error ? <h4 align="center" style={{ color: 'red' }}>{error}</h4> : null}
-      <form onSubmit={handleSubmit} encType="multipart/form-data" method='post'>
+
         <div>
           <label>Song Name</label>
           <input type="text" id="name" value={formData.name} onChange={handleChange} required />
@@ -77,14 +80,17 @@ export default function AddSong() {
           <label>Date</label>
           <input type="date" id="date" value={formData.date} onChange={handleChange} required />
         </div>
+        <br />
         <div>
           <label>Song Poster</label>
           <input type="file" id="imagefile" ref={fileInputRef} onChange={handleFileChange} required />
         </div>
+        <br />
         <div>
           <label>Audio File</label>
           <input type="file" id="audiofile" ref={fileInputRef} onChange={handleFileChange} required />
         </div>
+        <br />
         <button type="submit">Add</button>
       </form>
     </div>

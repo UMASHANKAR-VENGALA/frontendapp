@@ -64,8 +64,8 @@ export default function ViewUsers() {
                 <td>{user.email}</td>
                 <td>{user.contact}</td>
                 <td>
-                  <button onClick={() => viewUser(user.email)} className='button'>View</button>
-                  <button onClick={() => deleteUser(user.email)} className='button'>Delete</button>
+                  <button onClick={() => viewUser(user.email)} className='viewbutton' >View</button>&nbsp;&nbsp;&nbsp;
+                  <button onClick={() => deleteUser(user.email)} className='deletebutton' >Delete</button>
                 </td>
               </tr>
             ))
