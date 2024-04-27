@@ -75,7 +75,7 @@ export default function ViewAlbum() {
     try 
     {
       navigate(`/playsong/${songname}`)
-      // window.location.reload()
+      window.location.reload()
     } 
     catch (error) 
     {
