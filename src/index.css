@@ -6,10 +6,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("bgimage.jpeg");
-  background-size:cover; 
+  /* background-image: linear-gradient(to right,rgb(202, 105, 251),rgb(92, 193, 252)); */
+  /* background: rgb(2,0,36); */
+/* background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgba(9,9,121,1) 35%, rgb(246, 255, 0) 100%); */
+   background-size:cover; 
     background-repeat: no-repeat; 
     background-position:top;
-    overflow: hidden;
+    /* overflow: hidden;  */
 }
 
 code {

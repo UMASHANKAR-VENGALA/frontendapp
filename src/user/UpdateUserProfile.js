@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import config from '../config';
 
 export default function UpdateUserProfile() {
   const [userData, setUserData] = useState({
@@ -41,10 +42,10 @@ export default function UpdateUserProfile() {
       if (Object.keys(updatedData).length !== 0) {
         // There are changes
         updatedData.email = userData.email;
-        const response = await axios.put('http://localhost:2032/updateuserprofile', updatedData);
+        const response = await axios.put(`${config.url}/updateuserprofile`, updatedData);
         setMessage(response.data);
         setError('');
-        const res = await axios.get(`http://localhost:2032/userprofile/${userData.email}`, updatedData)
+        const res = await axios.get(`${config.url}/userprofile/${userData.email}`, updatedData)
         localStorage.setItem("user",JSON.stringify(res.data))
       } else {
         // No changes

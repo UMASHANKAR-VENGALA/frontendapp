@@ -114,7 +114,7 @@ export default function PlaySong() {
     return (
         <div className="main_content">
             <div className="info">
-                <div>PlaySong</div>
+                <h1 align="center" style={{fontSize:"35px"}}>Music Player</h1>
                 <div className="playlist" >
                     {songs.map((song, index) => (
                         <div key={index} className='card2'>

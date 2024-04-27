@@ -331,7 +331,8 @@ ul, ol {
 
 .play {
   /* Adjust width and height as needed */
-  width: 250px;
+  margin-top: 68px;
+  width: 270px;
   height: auto;
   object-fit: cover; /* Maintain aspect ratio and resize image */
   float: left;
@@ -391,3 +392,40 @@ ul, ol {
 .get-started-button:hover {
   background-color: #45a049;
 }
+
+/* ---------------------*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust column width as needed */
+  gap: 20px; /* Adjust gap between grid items */
+}
+
+.cardd {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  background-color: #dedede2e;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.imagee {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.buttonn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.buttonn:hover {
+  background-color: #0056b3;
+}
+
+

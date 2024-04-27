@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import config from '../config';
 
 export default function Registration() 
 {
@@ -29,7 +30,7 @@ export default function Registration()
     e.preventDefault();
     try 
     {
-      const response = await axios.post('http://localhost:2032/insertuser', formData);
+      const response = await axios.post(`${config.url}/insertuser`, formData);
       if (response.status === 200) 
       {
         //It will set all fields to ""

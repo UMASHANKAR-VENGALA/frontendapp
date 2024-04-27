@@ -2,11 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import config from '../config';
-import CreateAlbum from './CreateAlbum';
-import ViewAlbum from './ViewAlbum';
-import AddSongs from './AddSongs';
+import ViewAlbum from '../admin/ViewAlbum';
 
-export default function AdminAlbums() {
+export default function UserAlbums() {
+
   const navigate = useNavigate();
   const [events, setEvents] = useState([]);
 
@@ -34,7 +33,7 @@ export default function AdminAlbums() {
   return (
     <div className="main_content">
       <div className="info">
-        <div className="albumbuttons" style={{ textAlign: 'right' }}>
+        {/* <div className="albumbuttons" style={{ textAlign: 'right' }}>
           <Link to="/createalbum" className="buttonn">
             Create Album
           </Link>
@@ -42,11 +41,11 @@ export default function AdminAlbums() {
           <Link to="/addsongs" className="buttonn">
             Add Songs
           </Link>
-        </div>
+        </div> */}
 
-        <Routes>
+        {/* <Routes>
           <Route path="/createalbum" element={<CreateAlbum />} />
-        </Routes>
+        </Routes> */}
 
         <h1 style={{ textAlign: 'center' }}>Albums</h1>
         <div className="grid-container">
@@ -68,7 +67,7 @@ export default function AdminAlbums() {
 
                 <Routes>
                   <Route path="/viewalbum/:albumName" element={<ViewAlbum />} />
-                  <Route path="/addsongs" element={<AddSongs />} />
+                  {/* <Route path="/addsongs" element={<AddSongs />} /> */}
                 </Routes>
               </div>
             ))

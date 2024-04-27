@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import config from '../config';
 
 
 export default function UserLogin({onUserLogin}) 
@@ -23,7 +24,7 @@ export default function UserLogin({onUserLogin})
     e.preventDefault();
     try 
     {
-      const response = await axios.post('http://localhost:2032/checkuserlogin', formData);
+      const response = await axios.post(`${config.url}/checkuserlogin`, formData);
       if (response.data != null) 
       {
         onUserLogin();

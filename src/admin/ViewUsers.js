@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './admin.css';
+import config from '../config';
 
 export default function ViewUsers() {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export default function ViewUsers() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get('http://localhost:2032/viewusers');
+      const response = await axios.get(`${config.url}/viewusers`);
       setUsers(response.data);
     } catch (error) {
       console.error(error.message);
@@ -23,7 +24,7 @@ export default function ViewUsers() {
 
   const deleteUser = async (email) => {
     try {
-      await axios.delete(`http://localhost:2032/deleteuser/${email}`);
+      await axios.delete(`${config.url}/deleteuser/${email}`);
       fetchUsers();
     } catch (error) {
       console.error(error.message);

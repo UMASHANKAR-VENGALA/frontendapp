@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom'; // Import useParams
+import config from '../config';
 
 
 export default function ViewUserProfile() {
@@ -10,7 +11,7 @@ export default function ViewUserProfile() {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get(`http://localhost:2032/viewuserprofile/${email}`);
+        const response = await axios.get(`${config.url}/viewuserprofile/${email}`);
         setUserData(response.data);
       } catch (error) {
         console.error(error.message);
