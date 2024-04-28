@@ -33,12 +33,12 @@ export default function PlaySong() {
         }
     }, [songname]);
 
-    useEffect(() => {
-        // Play the first song automatically when component mounts
-        if (songs.length > 0) {
-            playAudio(0);
-        }
-    }, [songs]);
+    // useEffect(() => {
+    //     // Play the first song automatically when component mounts
+    //     if (songs.length > 0) {
+    //         playAudio(0);
+    //     }
+    // }, [songs]);
 
     const playAudio = (index) => {
         audioRefs.current[index].current.src = `${config.url}/songaudio/${songs[index].file}`;
