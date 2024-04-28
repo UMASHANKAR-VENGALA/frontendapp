@@ -15,7 +15,7 @@ export default function UserNavBar() {
      localStorage.removeItem('isUserLoggedIn');
      localStorage.removeItem('user');
 
-    navigate('/userlogin');
+    navigate('/');
     window.location.reload()
   };
 
