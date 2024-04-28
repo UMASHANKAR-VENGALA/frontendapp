@@ -5,8 +5,8 @@ import UserRegistration from "../user/UserRegistration";
 import UserLogin from "../user/UserLogin";
 import AdminLogin from "../admin/AdminLogin";
 import PageNotFound from "./PageNotFound";
-import './style.css'
-import LOGO from './LOGO.png';
+import './style.css';
+
 
 export default function NavBar({onAdminLogin,onUserLogin}) {
     return (
