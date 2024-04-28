@@ -47,7 +47,7 @@ export default function UserLogin({onUserLogin})
   };
 
   return (
-    <div>
+    <div align="center">
       
       <form onSubmit={handleSubmit}>
 

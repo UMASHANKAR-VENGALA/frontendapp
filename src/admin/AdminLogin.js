@@ -43,7 +43,7 @@ export default function AdminLogin({ onAdminLogin }) {
   };
 
   return (
-    <div>
+    <div align="center">
       
       <form onSubmit={handleSubmit}>
 

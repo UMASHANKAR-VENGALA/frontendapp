@@ -44,7 +44,7 @@ export default function ViewUsers() {
   }
 
   return (
-    <div>
+    <div align="center">
       <h1 align="center">Users</h1>
       <table border={1} align="center" style={{ width: 'auto', height: 'auto'}}>
         <thead>

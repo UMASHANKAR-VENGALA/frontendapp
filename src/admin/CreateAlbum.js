@@ -55,7 +55,7 @@ export default function CreateAlbum() {
     <div className="main_content">
     {/* <h2 class="header" > I am in View Users page</h2>   */}
     <div className="info">
-    <div>
+    <div align="center">
       <h3 align="center"><u>Add Album</u></h3>
       {message ? <h4 align="center">{message}</h4> : null}
       {error ? <h4 align="center" style={{ color: 'red' }}>{error}</h4> : null}

@@ -53,7 +53,7 @@ export default function Registration()
   };
   
   return (
-    <div>
+    <div align="center">
       
       <form onSubmit={handleSubmit}>
 

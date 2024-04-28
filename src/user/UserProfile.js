@@ -14,7 +14,7 @@ export default function UserProfile() {
 
   return (
     userData ? (
-      <div className='profile-card'>
+      <div className='profile-card' align="center">
         <h3 align="center">Profile</h3>
         <p><strong>Full Name:</strong> {userData.fullname}</p>
         <p><strong>Gender:</strong> {userData.gender}</p>

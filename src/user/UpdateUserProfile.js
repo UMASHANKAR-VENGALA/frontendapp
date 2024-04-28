@@ -61,7 +61,7 @@ export default function UpdateUserProfile() {
   
   
   return (
-    <div>
+    <div align="center">
       
       <form onSubmit={handleSubmit}>
         <div>
