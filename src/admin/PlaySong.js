@@ -1,5 +1,5 @@
 import axios from 'axios';
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faStepBackward, faStepForward, faBackward, faForward } from '@fortawesome/free-solid-svg-icons';
@@ -33,7 +33,14 @@ export default function PlaySong() {
         }
     }, [songname]);
 
-    const playAudio = useCallback((index) => {
+    // useEffect(() => {
+    //     // Play the first song automatically when component mounts
+    //     if (songs.length > 0) {
+    //         playAudio(0);
+    //     }
+    // }, [songs]);
+
+    const playAudio = (index) => {
         audioRefs.current[index].current.src = `${config.url}/songaudio/${songs[index].file}`;
         const playPromise = audioRefs.current[index].current.play();
         if (playPromise !== undefined) {
@@ -44,16 +51,7 @@ export default function PlaySong() {
                 })
                 .catch((error) => console.error('Autoplay was prevented:', error));
         }
-    }, [songs]);
-    
-    useEffect(() => {
-        // Play the first song automatically when component mounts
-        if (songs.length > 0) {
-            // playAudio(0); // disabled autoplay
-        }
-    }, [songs, playAudio]); // Added playAudio to the dependency array
-
-
+    };
 
     const toggleAudio = (index) => {
         if (currentSongIndex === index) {
@@ -112,7 +110,6 @@ export default function PlaySong() {
         const newTime = currentTimes[currentSongIndex] - 5; // Backward 5 seconds
         audioRefs.current[currentSongIndex].current.currentTime = Math.max(newTime, 0);
     };
-
     return (
         <div className="main_content">
             <div className="info">
