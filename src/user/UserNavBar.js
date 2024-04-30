@@ -6,6 +6,7 @@ import UpdateUserProfile from './UpdateUserProfile';
 import ViewAlbum from '../admin/ViewAlbum';
 import UserAlbums from './UserAlbums';
 import PlaySong from '../admin/PlaySong';
+import Home from '../main/Home';
 
 
 export default function UserNavBar() {
@@ -32,6 +33,7 @@ export default function UserNavBar() {
       </nav>
 
       <Routes>
+        <Route path='/' element={<Home/>}/>
         <Route path='/userhome' element={<UserHome/>} exact/>
         <Route path="/viewalbum" element={<ViewAlbum/>}/>
         <Route path="/viewalbum/:moviename" element={<ViewAlbum />} />

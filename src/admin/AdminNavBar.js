@@ -1,8 +1,6 @@
 import React from 'react';
 import { Route, Routes, Link, useNavigate } from 'react-router-dom';
 import './admin.css';
-
-
 import AdminHome from './AdminHome';
 import ViewUsers from './ViewUsers';
 import ViewUserProfile from './ViewUserProfile';
@@ -11,6 +9,7 @@ import CreateAlbum from './CreateAlbum';
 import ViewAlbum from './ViewAlbum';
 import AdminAlbums from './AdminAlbums';
 import PlaySong from './PlaySong';
+import Home from '../main/Home';
 
 export default function AdminNavBar() {
   const navigate = useNavigate();
@@ -39,6 +38,7 @@ export default function AdminNavBar() {
       </nav>
 
       <Routes>
+      <Route path='/' element={<Home />}/>
         <Route path="/adminhome" element={<AdminHome />} exact />
         <Route path="/viewusers" element={<ViewUsers />} exact />
         <Route path="/viewuserprofile/:email" element={<ViewUserProfile/>} exact />
