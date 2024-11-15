@@ -19,11 +19,13 @@ export default function App() {
   const onAdminLogin = () => {
     localStorage.setItem('isAdminLoggedIn', 'true');
     setIsAdminLoggedIn(true);
+    // setTimeout(5000);
   };
 
   const onUserLogin = () => {
     localStorage.setItem('isUserLoggedIn', 'true');
     setIsUserLoggedIn(true);
+    // setTimeout(5*60*1000);
   };
 
 
